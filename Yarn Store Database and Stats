@@ -1,0 +1,28 @@
+CREATE TABLE store (id INTEGER PRIMARY KEY, brand TEXT, material TEXT, weight INTEGER, price NUMERIC);
+
+
+INSERT INTO store VALUES 
+(1, "Lion Brand", "cotton", 3, 8.99),
+(2, "Hobbi", "cotton", 2, 5.99),
+(3, "Sugar n Cream", "wool", 4, 10.99),
+(4, "Red Heart", "acrylic", 4, 4.99),
+(5, "Aunt Lydias", "thread", 1, 5.99),
+(6, "Big Twist", "acylic", 4, 4.99),
+(7, "Bernat", "cotton", 4, 11.99),
+(8, "Caron One Pound", "wool", 4, 6.99),
+(9, "KC", "polyester", 2, 8.99),
+(10, "Lily", "wool", 3, 10.99),
+(11, "Pound of Love", "acrylic", 4, 12.99),
+(12, "Bernat Blanket", "cotton", 6, 12.99),
+(13, "Bernat", "velvet", 4, 11.99),
+(14, "Big Twist", "cotton", 3, 3.99),
+(15, "Lion Brand", "wool", 5, 9.99);
+
+--display database by price
+SELECT * FROM store ORDER BY price 
+
+--what is the average price of wool items?
+SELECT AVG(price) FROM store WHERE material="wool";
+
+--what brands carry yarn with 4 weight?
+SELECT brand, weight FROM store WHERE weight=4;
